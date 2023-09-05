@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom/client";
-import './index.css';
+import "./index.css";
+import FireBlogApp from "./FireBlogApp/FireBlogApp";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <h1>fire blog app</h1>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<FireBlogApp />);
