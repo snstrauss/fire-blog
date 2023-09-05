@@ -1,0 +1,16 @@
+@import '../../../base.scss';
+
+.container {
+  @extend .screen--vertical;
+
+  justify-content: center;
+  gap: 3em;
+}
+
+.emoji {
+  font-size: 4em;
+}
+
+.statusText {
+  color: grey;
+}
