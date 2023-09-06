@@ -13,6 +13,8 @@
     "footer": {
       "legal": "דברים שתמיד כתובים למטה"
     },
-    "missing_text": "טקסט חסר"
+    "errors": {
+      "missing_text": "טקסט חסר"
+    }
   }
 }

@@ -13,6 +13,8 @@
     "footer": {
       "legal": "Some stuff thats always here"
     },
-    "missing_text": "Missing text"
+    "errors": {
+      "missing_text": "Missing text"
+    }
   }
 }

@@ -1,0 +1,23 @@
+.text {
+  color: var(--color-accent);
+}
+
+:global(.role-body) {
+  font-size: var(--font-size-md);
+}
+
+:global(.role-h1) {
+  font-size: var(--font-size-xl);
+}
+
+:global(.role-h2) {
+  font-size: var(--font-size-lg);
+}
+
+:global(.role-h3) {
+  font-size: var(--font-size-sm);
+}
+
+:global(.bold) {
+  font-weight: 700;
+}

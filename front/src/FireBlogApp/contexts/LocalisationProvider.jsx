@@ -32,16 +32,14 @@ export function useLocalisation(namespace = "") {
         {},
         {
           get() {
-            return LOCALE_TO_TRANSLATIONS[locale].misc.missing_text;
+            return LOCALE_TO_TRANSLATIONS[locale].misc.errors.missing_text;
           },
         }
       ),
     [locale]
   );
 
-  const nameSpacedTexts = nestedGet(text, namespace, missingTextProxy);
-
-  return nameSpacedTexts;
+  return nestedGet(text, namespace, missingTextProxy);
 }
 
 export default function LocalisationProvider({ children }) {
