@@ -2,22 +2,29 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "../routes/HomePage/HomePage";
 import Blog from "../routes/Blog/Blog";
 import NotFoundPage from "../routes/NotFoundPage/NotFoundPage";
-import BlogPost from "../routes/BlogPost/BlogPost";
+// import BlogPost from "../routes/BlogPost/BlogPost";
+
+import NavRoot from "../routes/NavRoot/NavRoot";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
-    errorElement: <NotFoundPage />,
+    element: <NavRoot />,
+    children: [
+      {
+        path: "",
+        element: <HomePage />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
+      },
+    ],
   },
-  {
-    path: "/blog",
-    element: <Blog />,
-  },
-  {
-    path: '/post/:postId',
-    element: <BlogPost />
-  }
 ]);
 
 export default function RoutesProvider() {
