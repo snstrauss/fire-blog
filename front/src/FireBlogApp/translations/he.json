@@ -1,5 +1,9 @@
 {
-  "home": {},
+  "home": {
+    "title": "אש!",
+    "subtitle": "בלוג נוסף על אש",
+    "button": "פוסטים אחרונים"
+  },
   "blog": {},
   "not_found": {
     "title": "אוי..",

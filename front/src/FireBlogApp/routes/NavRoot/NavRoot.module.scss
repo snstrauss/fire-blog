@@ -3,6 +3,7 @@
 .layout {
   height: 100%;
   background-color: var(--color-secondary);
+  overflow: hidden;
 
   & > * {
     width: 100%;

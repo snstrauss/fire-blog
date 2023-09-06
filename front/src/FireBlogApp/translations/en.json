@@ -1,5 +1,9 @@
 {
-  "home": {},
+  "home": {
+    "title": "FIRE!",
+    "subtitle": "another blog about fire",
+    "button": "Latest posts"
+  },
   "blog": {},
   "not_found": {
     "title": "hmm..",
