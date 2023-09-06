@@ -1,10 +1,8 @@
-@import '../../../base.scss';
+@import "../../common/mixins.scss";
 
 .container {
-  @extend .screen--vertical;
-
-  justify-content: center;
-  gap: 3em;
+  @include flex($align: center, $justify: center);
+  gap: 2em;
 }
 
 .emoji {
