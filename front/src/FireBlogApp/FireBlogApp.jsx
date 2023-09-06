@@ -1,5 +1,10 @@
+import LocalisationProvider from "./contexts/LocalisationProvider";
 import RoutesProvider from "./contexts/routesProvider";
 
 export default function FireBlogApp() {
-  return <RoutesProvider />;
+  return (
+    <LocalisationProvider>
+      <RoutesProvider />
+    </LocalisationProvider>
+  );
 }

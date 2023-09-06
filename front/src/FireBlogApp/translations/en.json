@@ -1,0 +1,18 @@
+{
+  "home": {},
+  "blog": {},
+  "not_found": {
+    "title": "hmm..",
+    "subtitle": "I'm sure it was somewhere here..."
+  },
+  "misc": {
+    "nav_menu": {
+      "home": "home",
+      "blog": "blog"
+    },
+    "footer": {
+      "legal": "Some stuff thats always here"
+    },
+    "missing_text": "Missing text"
+  }
+}
