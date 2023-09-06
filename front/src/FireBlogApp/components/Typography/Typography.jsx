@@ -11,11 +11,12 @@ const typographyPropTypes = {
   path: PropTypes.string,
   className: PropTypes.string,
   bold: PropTypes.bool,
+  override: PropTypes.string,
   role: PropTypes.oneOf(["body", "h1", "h2", "h3"]),
 };
 
 export function makeNamespacedTypography(namespace) {
-  function NameSpacedTypography({ path, className, role, bold }) {
+  function NameSpacedTypography({ path, className, role, bold, override }) {
     return (
       <Typography
         namespace={namespace}
@@ -23,6 +24,7 @@ export function makeNamespacedTypography(namespace) {
         className={className}
         role={role}
         bold={bold}
+        override={override}
       />
     );
   }
@@ -38,14 +40,19 @@ export default function Typography({
   className = "",
   role = "body",
   bold = false,
+  override,
 }) {
   const { text: allTranslations } = useContext(LocalisationContext);
   const texts = useLocalisation(namespace);
 
   const textToRender = useMemo(
     () =>
-      path in texts ? texts[path] : allTranslations.misc.errors.missing_text,
-    [path, texts, allTranslations]
+      override
+        ? override
+        : path in texts
+        ? texts[path]
+        : allTranslations.misc.errors.missing_text,
+    [path, texts, allTranslations, override]
   );
 
   const textClassname = `${S.text} ${className} role-${role} ${

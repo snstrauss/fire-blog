@@ -2,6 +2,7 @@
 
 .layout {
   height: 100%;
+  background-color: var(--color-secondary);
 
   & > * {
     width: 100%;
@@ -11,10 +12,20 @@
 }
 
 .navMenu {
-  @include flex($direction: row, $gap: 1em);
+  @include flex($direction: row, $gap: 2em, $align: center);
+
+  padding: 1em;
+
+  .emoji {
+    font-size: 2em;
+  }
 
   a {
     text-decoration: none;
+  }
+
+  .localeSwitch {
+    margin-inline-start: auto;
   }
 }
 
@@ -31,7 +42,20 @@
   text-align: center;
   padding: 1em 2em;
 
+  opacity: 0.3;
+
+  color: var(--color-accent);
+
+  span {
+    color: currentColor;
+  }
+
   hr {
-    margin-top: 0.5em;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid currentColor;
+    margin: 1em 0;
+    padding: 0;
   }
 }
