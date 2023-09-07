@@ -4,13 +4,16 @@
   @include flex($align: center);
   position: relative;
 
+  text-align: center;
+  overflow-y: scroll;
+  height: 70dvb;
+
   .title {
     @include text-appear-animation();
   }
 
   .paragraph {
     max-width: 30em;
-    text-align: center;
 
     &:not(:last-child) {
       margin-bottom: 1.5em;
@@ -29,12 +32,17 @@
   }
 
   .authorDetails {
-    @include absolute-position($top: auto, $left: auto);
     @include text-appear-animation($max-opacity: 0.3, $initial-drop: 0);
+    margin-top: auto;
     padding: 0.5em;
+    text-align: start;
 
     span {
       color: var(--color-accent);
     }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
