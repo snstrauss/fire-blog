@@ -4,7 +4,9 @@
     "subtitle": "another blog about fire",
     "button": "Latest posts"
   },
-  "blog": {},
+  "blog": {
+    "title": "Fire Posts"
+  },
   "not_found": {
     "title": "hmm..",
     "subtitle": "I'm sure it was somewhere here..."
@@ -18,7 +20,8 @@
       "legal": "Some stuff thats always here"
     },
     "errors": {
-      "missing_text": "Missing text"
+      "missing_text": "Missing text",
+      "data_not_found": "Can't find any data"
     }
   }
 }

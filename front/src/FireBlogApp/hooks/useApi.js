@@ -4,8 +4,14 @@ const BASE_URL = "https://jsonplaceholder.typicode.com/";
 
 export default function useApi(endpoint) {
   const [data, setData] = useState();
-  const [requestPending, setRequestPending] = useState(true);
+  const [requestPending, setRequestPending] = useState(false);
   const [error, setError] = useState();
+
+  useEffect(() => {
+    setData();
+    setRequestPending(false);
+    setError();
+  }, [])
 
   useEffect(() => {
     setRequestPending(true);

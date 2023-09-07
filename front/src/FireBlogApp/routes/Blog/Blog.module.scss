@@ -1,0 +1,45 @@
+@import "../../common/mixins.scss";
+
+.blog {
+  @include flex($align: center);
+
+  .title {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-style: dotted;
+    text-underline-offset: 0.4em;
+  }
+
+  .posts {
+    margin-top: 2em;
+    width: 80%;
+    height: 70vh;
+
+    overflow: scroll;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    & > * {
+      &:nth-child(5n + 1),
+      &:nth-child(5n + 2),
+      &:nth-child(5n + 3) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(5n + 4) {
+        grid-column: 3 / span 4;
+      }
+
+      &:nth-child(5n + 5) {
+        grid-column: 7 / span 4;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
