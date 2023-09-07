@@ -17,7 +17,14 @@ export default function Blog() {
         {requestPending && <Spinner />}
         {error && <ErrorState />}
         {posts &&
-          posts.map((post) => <BlogPostLink key={post.id} post={post} />)}
+          posts.map((post, i) => (
+            <BlogPostLink
+              className={S.link}
+              key={post.id}
+              delayIndex={i}
+              post={post}
+            />
+          ))}
       </div>
     </div>
   );

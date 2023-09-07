@@ -22,7 +22,7 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
 
-    & > * {
+    .link {
       &:nth-child(5n + 1),
       &:nth-child(5n + 2),
       &:nth-child(5n + 3) {
@@ -36,10 +36,25 @@
       &:nth-child(5n + 5) {
         grid-column: 7 / span 4;
       }
+
+      animation: post-appear 1s ease-in-out both;
+
+      animation-delay: calc(var(--delay-index) * 100ms);
     }
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @keyframes post-appear {
+      from {
+        transform: translateY(150px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 }
