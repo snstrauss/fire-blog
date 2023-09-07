@@ -1,0 +1,10 @@
+@import '../../common/mixins.scss';
+
+.errorState {
+  @include flex($align: center, $justify: center);
+  height: 100%;
+
+  .emoji {
+    font-size: 5em;
+  }
+}
