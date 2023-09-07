@@ -5,29 +5,14 @@
 
   .posts {
     width: 80%;
-    height: 70vh;
+    height: 64dvb;
     overflow: scroll;
 
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
 
     .link {
       text-transform: capitalize;
-
-      &:nth-child(5n + 1),
-      &:nth-child(5n + 2),
-      &:nth-child(5n + 3) {
-        grid-column: span 4;
-      }
-
-      &:nth-child(5n + 4) {
-        grid-column: 3 / span 4;
-      }
-
-      &:nth-child(5n + 5) {
-        grid-column: 7 / span 4;
-      }
 
       @include text-appear-animation(
         $delay: var(--delay-index),
@@ -37,6 +22,26 @@
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @media (min-aspect-ratio: 1 / 1) {
+      grid-template-columns: repeat(12, 1fr);
+
+      .link {
+        &:nth-child(5n + 1),
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 3) {
+          grid-column: span 4;
+        }
+
+        &:nth-child(5n + 4) {
+          grid-column: 3 / span 4;
+        }
+
+        &:nth-child(5n + 5) {
+          grid-column: 7 / span 4;
+        }
+      }
     }
   }
 }
