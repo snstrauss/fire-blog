@@ -18,6 +18,15 @@
   font-size: var(--font-size-sm);
 }
 
+:global(.role-title) {
+  @extend :global(.role-h2);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-style: dotted;
+  text-underline-offset: 0.4em;
+  margin-bottom: 0.6em;
+}
+
 :global(.bold) {
   font-weight: 700;
 }
