@@ -11,7 +11,7 @@ export default function useApi(endpoint) {
     setData();
     setRequestPending(false);
     setError();
-  }, [])
+  }, []);
 
   useEffect(() => {
     setRequestPending(true);
@@ -24,6 +24,7 @@ export default function useApi(endpoint) {
 
         return response.json();
       })
+      .then(addMockDelay)
       .then((data) => {
         setData(data);
       })
@@ -40,4 +41,13 @@ export default function useApi(endpoint) {
     requestPending,
     error,
   };
+}
+
+// this mock delay is added only to show off 'loading' animation
+function addMockDelay(data) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(data);
+    }, 1500);
+  });
 }
