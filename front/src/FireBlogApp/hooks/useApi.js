@@ -2,6 +2,22 @@ import { useEffect, useState } from "react";
 
 const BASE_URL = "https://jsonplaceholder.typicode.com/";
 
+export function makeApiCall(endpoint) {
+  return new Promise((resolve, reject) => {
+    fetch(`${BASE_URL}${endpoint}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("data not found");
+        }
+
+        return response.json();
+      })
+      .then(addMockDelay)
+      .then(resolve)
+      .catch(reject);
+  });
+}
+
 export default function useApi(endpoint) {
   const [data, setData] = useState();
   const [requestPending, setRequestPending] = useState(false);
@@ -16,15 +32,7 @@ export default function useApi(endpoint) {
   useEffect(() => {
     setRequestPending(true);
 
-    fetch(`${BASE_URL}${endpoint}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("data not found");
-        }
-
-        return response.json();
-      })
-      .then(addMockDelay)
+    makeApiCall(endpoint)
       .then((data) => {
         setData(data);
       })
