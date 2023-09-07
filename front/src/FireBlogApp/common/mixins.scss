@@ -28,6 +28,12 @@
   --initial-drop: #{$initial-drop};
 }
 
+@mixin hover-supported() {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
 @keyframes text-appear {
   from {
     transform: translateY(var(--initial-drop));

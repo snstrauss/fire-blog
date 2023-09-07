@@ -20,8 +20,10 @@
   .emoji {
     font-size: 2em;
 
-    &:hover {
-      animation: burning 0.5s linear infinite alternate;
+    @include hover-supported {
+      &:hover {
+        animation: burning 0.5s linear infinite alternate;
+      }
     }
 
     @keyframes burning {
@@ -36,8 +38,10 @@
 
     span {
       transition: color 0.3s ease-in-out;
-      &:hover {
-        color: var(--color-accent);
+      @include hover-supported {
+        &:hover {
+          color: var(--color-accent);
+        }
       }
     }
   }
