@@ -1,0 +1,38 @@
+@import "../../common/mixins.scss";
+
+.blogPost {
+  @include flex($align: center);
+  position: relative;
+
+  .title {
+    @include text-appear-animation();
+  }
+
+  .paragraph {
+    max-width: 30em;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+
+    &::first-letter {
+      font-size: 4em;
+      line-height: 0.5;
+      text-transform: capitalize;
+      font-style: italic;
+    }
+
+    @include text-appear-animation($delay: calc(var(--delay-index) + 5));
+  }
+
+  .authorDetails {
+    @include absolute-position($top: auto, $left: auto);
+    @include text-appear-animation($max-opacity: 0.3, $initial-drop: 0);
+    padding: 0.5em;
+
+    span {
+      color: var(--color-accent);
+    }
+
+  }
+}

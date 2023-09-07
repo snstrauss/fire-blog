@@ -7,6 +7,11 @@
   "blog": {
     "title": "פוסטים אש"
   },
+  "blog_post": {
+    "author_details": {
+      "write_author": "כתבו ל {{name}} בכתובת {{email}}"
+    }
+  },
   "not_found": {
     "title": "אוי..",
     "subtitle": "בטוח זה היה איפהשהו כאן..."

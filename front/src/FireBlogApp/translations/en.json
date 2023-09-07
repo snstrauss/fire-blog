@@ -7,6 +7,11 @@
   "blog": {
     "title": "Fire Posts"
   },
+  "blog_post": {
+    "author_details": {
+      "write_author": "Write {{name}} at {{email}}"
+    }
+  },
   "not_found": {
     "title": "hmm..",
     "subtitle": "I'm sure it was somewhere here..."
