@@ -3,12 +3,10 @@
 .container {
   @include flex($align: center, $justify: center);
   gap: 2em;
+  text-align: center;
+  height: 100%;
 }
 
 .emoji {
   font-size: 4em;
-}
-
-.statusText {
-  color: grey;
 }
