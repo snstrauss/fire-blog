@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/heebo": "^5.0.8",
+    "@fontsource-variable/playfair-display": "^5.0.9",
+    "@fontsource-variable/rubik": "^5.0.10",
+    "@fontsource/abril-fatface": "^5.0.11",
+    "@fontsource/suez-one": "^5.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0"
