@@ -1,8 +1,9 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useMemo } from "react";
 import PropTypes from "prop-types";
 import englishTranslations from "../translations/en.json";
 import hebrewTranslations from "../translations/he.json";
 import { nestedGet } from "../common/helpers";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export const LOCALE = {
   EN: "en",
@@ -43,7 +44,9 @@ export function useLocalisation(namespace = "") {
 }
 
 export default function LocalisationProvider({ children }) {
-  const [selectedLocale, setSelectedLocale] = useState(LOCALE.EN);
+  const [storedLocal, setStoredLocale] = useLocalStorage("locale", LOCALE.EN);
+
+  const selectedLocale = storedLocal;
 
   const writingDirection = useMemo(
     () =>
@@ -65,7 +68,7 @@ export default function LocalisationProvider({ children }) {
   const payload = {
     writingDirection,
     locale: selectedLocale,
-    setLocale: setSelectedLocale,
+    setLocale: setStoredLocale,
     text: selectedLocaleTranslations,
   };
 
