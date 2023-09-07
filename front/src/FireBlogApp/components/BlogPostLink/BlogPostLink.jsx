@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import Typography from "../../components/Typography/Typography";
 
 export default function BlogPostLink({ post, delayIndex, className }) {
-  const { userId, title, body } = post;
+  const { userId, title, body, id } = post;
 
   return (
     <Link
       className={`${S.link} ${className}`}
       style={{'--delay-index': delayIndex}}
-      to={`/blog-post/${userId}`}
+      to={`/blog-post/${userId}/${id}`}
       state={{ title, body }}
     >
       <div className={S.flair}></div>
