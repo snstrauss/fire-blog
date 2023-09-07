@@ -3,15 +3,7 @@
 .blog {
   @include flex($align: center);
 
-  .title {
-    text-decoration: underline;
-    text-decoration-color: var(--color-accent);
-    text-decoration-style: dotted;
-    text-underline-offset: 0.4em;
-  }
-
   .posts {
-    margin-top: 2em;
     width: 80%;
     height: 70vh;
 
@@ -37,24 +29,14 @@
         grid-column: 7 / span 4;
       }
 
-      animation: post-appear 1s ease-in-out both;
-
-      animation-delay: calc(var(--delay-index) * 100ms);
+      @include text-appear-animation(
+        $delay: var(--delay-index),
+        $initial-drop: 50vh
+      );
     }
 
     &::-webkit-scrollbar {
       display: none;
-    }
-
-    @keyframes post-appear {
-      from {
-        transform: translateY(150px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
   }
 }

@@ -13,15 +13,28 @@
   gap: $gap;
 }
 
-@mixin absolute-position(
-  $top: 0,
-  $left: 0,
-  $bottom: 0,
-  $right: 0
-) {
+@mixin absolute-position($top: 0, $left: 0, $bottom: 0, $right: 0) {
   position: absolute;
   top: $top;
   left: $left;
   bottom: $bottom;
   right: $right;
+}
+
+@mixin text-appear-animation($delay: 0, $max-opacity: 1, $initial-drop: 50px) {
+  animation: text-appear 1s ease-in-out both;
+  animation-delay: calc($delay * 100ms);
+  --max-opacity: #{$max-opacity};
+  --initial-drop: #{$initial-drop};
+}
+
+@keyframes text-appear {
+  from {
+    transform: translateY(var(--initial-drop));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: var(--max-opacity);
+  }
 }

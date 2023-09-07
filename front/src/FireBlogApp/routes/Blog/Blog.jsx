@@ -12,7 +12,7 @@ export default function Blog() {
 
   return (
     <div className={S.blog}>
-      <BlogTexts className={S.title} path="title" role="h2" bold />
+      <BlogTexts path="title" role="title" bold />
       <div className={S.posts}>
         {requestPending && <Spinner />}
         {error && <ErrorState />}
