@@ -3,12 +3,13 @@ import S from "./BlogPostLink.module.scss";
 import PropTypes from "prop-types";
 import Typography from "../../components/Typography/Typography";
 
-export default function BlogPostLink({ post }) {
+export default function BlogPostLink({ post, delayIndex, className }) {
   const { userId, title, body } = post;
 
   return (
     <Link
-      className={S.link}
+      className={`${S.link} ${className}`}
+      style={{'--delay-index': delayIndex}}
       to={`/blog-post/${userId}`}
       state={{ title, body }}
     >
@@ -23,4 +24,6 @@ export default function BlogPostLink({ post }) {
 
 BlogPostLink.propTypes = {
   post: PropTypes.object,
+  className: PropTypes.string,
+  delayIndex: PropTypes.number
 };
