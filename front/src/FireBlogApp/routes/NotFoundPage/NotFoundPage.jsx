@@ -7,7 +7,7 @@ export default function NotFoundPage() {
   return (
     <div className={S.container}>
       <h1 className={S.emoji}>🤔</h1>
-      <NotFoundText path="title" role="h2" bold />
+      <NotFoundText path="title" role="h1" bold />
       <NotFoundText path="subtitle" />
     </div>
   );

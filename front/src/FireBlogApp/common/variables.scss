@@ -3,10 +3,9 @@
   --color-secondary: #023047;
   --color-accent: #219cba;
 
-  --font-size-sm: 16px;
-  --font-size-md: 25px;
-  --font-size-lg: 50px;
-  --font-size-xl: 74px;
+  --font-size-sm: max(2vmin, 0.8em);
+  --font-size-md: max(3vmin, 1em);
+  --font-size-lg: max(6vmin, 1.8em);
 
   --title-fonts: "Abril Fatface", "Heebo Variable";
 }

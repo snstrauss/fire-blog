@@ -7,19 +7,15 @@
 }
 
 :global(.role-h1) {
-  font-size: var(--font-size-xl);
-}
-
-:global(.role-h2) {
   font-size: var(--font-size-lg);
 }
 
-:global(.role-h3) {
+:global(.role-h2) {
   font-size: var(--font-size-sm);
 }
 
 :global(.role-title) {
-  @extend :global(.role-h2);
+  @extend :global(.role-h1);
   text-decoration: underline;
   text-decoration-color: var(--color-accent);
   text-decoration-style: dotted;

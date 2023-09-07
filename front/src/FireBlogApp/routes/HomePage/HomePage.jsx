@@ -13,7 +13,7 @@ export default function HomePage() {
         <video src={fireVideoSrc} loop autoPlay muted />
         <div className={S.textContainer}>
           <HomePageText className={S.title} path="title" bold />
-          <HomePageText className={S.subtitle} path="subtitle" role="h2" />
+          <HomePageText className={S.subtitle} path="subtitle" role="h1" />
           <Link to="/blog">
             <Button>
               <HomePageText path="button" />

@@ -14,7 +14,7 @@ const typographyPropTypes = {
   replace: PropTypes.object,
   override: PropTypes.string,
   styleParams: PropTypes.object,
-  role: PropTypes.oneOf(["body", "h1", "h2", "h3", "title"]),
+  role: PropTypes.oneOf(["body", "h1", "h2", "title"]),
 };
 
 export function makeNamespacedTypography(namespace) {

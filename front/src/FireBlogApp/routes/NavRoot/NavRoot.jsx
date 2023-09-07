@@ -45,7 +45,7 @@ function NavMenu() {
         onClick={toggleHebrewAndEnglishLocales}
         className={S.localeSwitch}
       >
-        <Typography override={locale.toUpperCase()} role="h3" />
+        <Typography override={locale.toUpperCase()} role="h2" />
       </Button>
     </div>
   );
@@ -55,7 +55,7 @@ const FooterText = makeNamespacedTypography("misc.footer");
 function Footer() {
   return (
     <div className={S.footer}>
-      <FooterText path="legal" role="h3" /> <span>ⓒ</span>
+      <FooterText path="legal" role="h2" /> <span>ⓒ</span>
       <hr />
     </div>
   );

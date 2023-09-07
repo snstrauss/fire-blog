@@ -53,7 +53,7 @@ function AuthorDetails({ name, email }) {
       <AuthorDetailsText
         path="write_author"
         replace={{ name, email }}
-        role="h3"
+        role="h2"
       />
     </div>
   );
