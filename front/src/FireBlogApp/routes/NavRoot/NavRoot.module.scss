@@ -19,10 +19,27 @@
 
   .emoji {
     font-size: 2em;
+
+    &:hover {
+      animation: burning 0.5s linear infinite alternate;
+    }
+
+    @keyframes burning {
+      to {
+        transform: rotateY(180deg);
+      }
+    }
   }
 
   a {
     text-decoration: none;
+
+    span {
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
   }
 
   .localeSwitch {

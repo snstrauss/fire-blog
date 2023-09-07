@@ -33,7 +33,7 @@ function NavMenu() {
   return (
     <div className={S.navMenu}>
       <Link to="/">
-        <span className={S.emoji}>🔥</span>
+        <div className={S.emoji}>🔥</div>
       </Link>
       <Link to="/">
         <NavMenuText path="home" />
