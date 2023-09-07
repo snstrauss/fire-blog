@@ -25,6 +25,8 @@
   text-decoration-style: dotted;
   text-underline-offset: 0.4em;
   margin-bottom: 0.6em;
+  font-family: var(--title-fonts);
+  letter-spacing: 0.02ch;
 }
 
 :global(.bold) {

@@ -27,6 +27,12 @@
       font-size: 330px;
       line-height: 0.8;
       font-style: italic;
+      font-family: "Playfair Display", "Suez one";
+    }
+
+    .subtitle {
+      font-family: var(--title-fonts);
+      letter-spacing: 0.05ch;
     }
 
     button {

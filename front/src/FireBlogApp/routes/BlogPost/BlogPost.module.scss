@@ -10,6 +10,7 @@
 
   .paragraph {
     max-width: 30em;
+    text-align: center;
 
     &:not(:last-child) {
       margin-bottom: 1.5em;
@@ -19,6 +20,8 @@
       font-size: 4em;
       line-height: 0.5;
       text-transform: capitalize;
+
+      font-family: "Abril Fatface";
       font-style: italic;
     }
 
@@ -33,6 +36,5 @@
     span {
       color: var(--color-accent);
     }
-
   }
 }
