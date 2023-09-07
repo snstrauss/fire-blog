@@ -1,6 +1,6 @@
 # Fire Blog 🔥
 
-### See it live on [Surge.sh](fire-blog.surge.sh)
+### See it live on [Surge.sh](https://fire-blog.surge.sh)
 
 ## Description
 
