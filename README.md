@@ -6,7 +6,9 @@
 
 A simple blog website, with data coming from [{JSON}Placeholder](https://jsonplaceholder.typicode.com/).
 
-The blog is responsive, and supports both English and Hebrew translations, while retaining user selection in local-storage to provide the user with a pleasant and reliable experience.
+The website is responsive, and will look good on mobile as well as on desktop, but viewing on desktop is preferred, so you can check out some of the nice, more interesting layouts and hover effects.
+
+The website supports both English and Hebrew translations, while retaining user selection in local-storage to provide the user with a pleasant and reliable experience.
 
 ## Tech Stack
 
